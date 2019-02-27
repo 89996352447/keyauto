@@ -1,0 +1,30 @@
+<<context>
+
+  <input pattern="* (привет*|здравствуй*) *">
+
+    <output value="Привет, Какой город тебя интересует?" />
+
+
+ <context>
+    <input pattern="* $city"/>
+    <sample>
+      <item>Краснодар</item>
+      <item>Сочи</item>
+      <item>Москва</item>
+    </sample>
+
+
+<input pattern="$Text">
+
+        <!-- Сохранем мия пользователя в переменную city -->
+          <var name="city" value="cap($Text)" scope="user"/>
+          <output value="Добро пожаловать в Ключавто, $city!"/>
+</input>
+
+   
+      </context>
+    </input>
+</context>
+
+
+
